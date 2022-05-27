@@ -5,7 +5,6 @@ import java.io.IOException;
 public class server {
     public static void main(String[] args){
 		try {
-
             ServerSocket ServeSocket = new ServerSocket(0440);
             System.out.println("Socket connected");
 
@@ -46,9 +45,9 @@ public class server {
         for(int i=0;i< wrd2.length();i++){
             ch2[i] = Character.toUpperCase(ch2[i]);
         }
-        if(wrd1.length()==wrd2.length()){
-            for(int  i=0;i<wrd1.length();i++){
-                for(int j=0;i<wrd2.length();j++){
+        if(wrd1.length() == wrd2.length()){
+            for(int i=0; i < wrd1.length(); i++){
+                for(int j=0; i < wrd2.length(); j++){
                     if(ch1[i] == ch2[j]){
                         flag = 1;
                         break;
@@ -65,7 +64,7 @@ public class server {
 
     static String show(int flag){  
         String message;
-        if(flag == 0){
+        if(flag == 1){
            message = "Answer is word are not Anagram";	
         }
         else{
